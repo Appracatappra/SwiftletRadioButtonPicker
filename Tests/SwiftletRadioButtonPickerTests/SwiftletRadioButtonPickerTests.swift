@@ -6,6 +6,7 @@ final class SwiftletRadioButtonPickerTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(SwiftletRadioButtonPicker().text, "Hello, World!")
+        let button = SwiftletRadioButton(id: "0", name: "Hello, World!")
+        XCTAssertEqual(button.name, "Hello, World!")
     }
 }
