@@ -21,7 +21,9 @@ Since, the **Swift Package Manager** is integrated with Xcode 11 (and greater), 
 
 ## Using SwiftletRadioButtonPicker
 
-The `SwiftletRadioButtonPicker` works best when presenting a very limited number of options to the user. For example: selecting Male or Female. Generally this should be used for six or less options. For more options, you'll be better suited using one of the standard, built-in SwiftUI Picker views.
+The `SwiftletRadioButtonPicker` works best when presenting a very limited number of options to the user. For example: selecting **Male** or **Female**. 
+
+Generally this Picker should only be used for six or less options on platforms like iOS. When the user need to select from a greater number of options, you'll be better suited using one of the standard, built-in SwiftUI Picker views.
 
 ### Example
 
@@ -39,7 +41,9 @@ Which would display a view like the following:
 
 ![](Documentation/Images/Picker01.png)
 
-Optionally, you can feed any **Enum** to the `radioButtons` function and the Picker will automatically generate a list of Radio Buttons from the **Enum**.
+## Generating from an Enum
+
+Optionally, you can feed any **Enum** that has a raw value and conforms to `CaseIterable, Identifiable` to the `radioButtons` function and the Picker will automatically generate a list of Radio Buttons from the **Enum**.
 
 ### Example
 
