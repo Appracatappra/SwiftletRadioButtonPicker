@@ -150,7 +150,7 @@ public struct SwiftletRadioButtonPicker: View {
         HStack {
             Image(systemName: (button.isSelected) ? selectedSymbolName : unselectedSymbolName)
                 .resizable()
-                .frame(width: selectorSize, height: selectorSize)
+                .frame(width: CGFloat(selectorSize), height: CGFloat(selectorSize))
             
             Text(button.name)
             
