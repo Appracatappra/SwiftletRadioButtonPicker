@@ -148,9 +148,15 @@ public struct SwiftletRadioButtonPicker: View {
     /// - Returns: The View for the `SwiftletRadioButton`.
     private func radioButton(_ button:SwiftletRadioButton) -> some View {
         HStack {
+            #if swift(>=5.5)
+            Image(systemName: (button.isSelected) ? selectedSymbolName : unselectedSymbolName)
+                .resizable()
+                .frame(width: selectorSize, height: selectorSize)
+            #else
             Image(systemName: (button.isSelected) ? selectedSymbolName : unselectedSymbolName)
                 .resizable()
                 .frame(width: CGFloat(selectorSize), height: CGFloat(selectorSize))
+            #endif
             
             Text(button.name)
             
