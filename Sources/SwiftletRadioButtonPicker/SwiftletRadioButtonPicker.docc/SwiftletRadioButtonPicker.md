@@ -1,25 +1,8 @@
-# SwiftletRadioButtonPicker for Swift and SwiftUI
-
-![](https://img.shields.io/badge/license-MIT-green) ![](https://img.shields.io/badge/maintained%3F-Yes-green) ![](https://img.shields.io/badge/swift-5.4-green) ![](https://img.shields.io/badge/iOS-17.0-red) ![](https://img.shields.io/badge/macOS-14.0-red) ![](https://img.shields.io/badge/tvOS-17.0-red) ![](https://img.shields.io/badge/watchOS-10.0-red)
+# ``SwiftletRadioButtonPicker``
 
 Creates a cross-platform Radio Button Picker that allow the user to select from a small group of options by presenting a list of `SwiftletRadioButton` objects that the user can tap on to select one items from the list.
 
-<a name="Installation"></a>
-## Installation
-
-**Swift Package Manager** (Xcode 11 and above)
-
-1. In Xcode, select the **File** > **Add Package Dependency…** menu item.
-2. Paste `https://github.com/Appracatappra/SwiftletRadioButtonPicker.git` in the dialog box.
-3. Follow the Xcode's instruction to complete the installation.
-
-> Why not CocoaPods, or Carthage, or blank?
-
-Supporting multiple dependency managers makes maintaining a library exponentially more complicated and time consuming.
-
-Since, the **Swift Package Manager** is integrated with Xcode 11 (and greater), it's the easiest choice to support going further.
-
-## Using SwiftletRadioButtonPicker
+## Overview
 
 The `SwiftletRadioButtonPicker` works best when presenting a very limited number of options to the user. For example: selecting **Male** or **Female**. 
 
@@ -39,7 +22,7 @@ SwiftletRadioButtonPicker(alignment: .grid, columns: 3, selection:"2")
 
 Which would display a view like the following:
 
-![](Sources/SwiftletRadioButtonPicker/SwiftletRadioButtonPicker.docc/Resources/Picker01.png)
+![](Resources/Picker01.png)
 
 ## Generating from an Enum
 
@@ -103,8 +86,4 @@ SwiftletRadioButtonPicker(alignment: .grid, title:"Select barcode format:", colu
 
 Would create a Picker that looks similar to the following on iOS:
 
-![](Sources/SwiftletRadioButtonPicker/SwiftletRadioButtonPicker.docc/Resources/Picker02.png)
-
-# Documentation
-
-The **Package** includes full **DocC Documentation** for all features.
+![](Resources/Picker02.png)
