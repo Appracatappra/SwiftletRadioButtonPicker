@@ -1,0 +1,12 @@
+version: 1
+builder:
+  configs:
+  - platform: ios
+    scheme: SwiftletRadioButtonPicker
+  - platform: macos-xcodebuild
+    scheme: SwiftletRadioButtonPicker
+  - platform: tvos
+    scheme: SwiftletRadioButtonPicker
+  - platform: watchos
+    scheme: SwiftletRadioButtonPicker
+  - documentation_targets: [SwiftletRadioButtonPicker]
