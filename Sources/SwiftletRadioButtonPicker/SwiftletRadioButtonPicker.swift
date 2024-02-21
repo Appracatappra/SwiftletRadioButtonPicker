@@ -66,7 +66,7 @@ public struct SwiftletRadioButtonPicker: View {
     }
     
     // MARK: - Initializers
-    public init(alignment:SwiftletRadioButtonAlignment = .vertical, title:String = "Please select one:", showTitle:Bool = true, titleColor:Color = .black, selectorColor:Color = .black, selectorSize:Double = 24, selectedSymbolName:String = "largecircle.fill.circle", unselectedSymbolName:String = "circle", textColor:Color = .black, columns:Int = 2, selection:String = "", selectionChanged:((SwiftletRadioButton) -> Void)? = nil) {
+    public init(alignment:SwiftletRadioButtonAlignment = .vertical, title:String = "Please select one:", showTitle:Bool = true, titleColor:Color = .black, selectorColor:Color = .black, selectorSize:Double = 24, selectedSymbolName:String = "largecircle.fill.circle", unselectedSymbolName:String = "circle", textColor:Color = .black, columns:Int = 2, selection:String = "", buttonGroup:SwiftletRadioButtonGroup = SwiftletRadioButtonGroup(), selectionChanged:((SwiftletRadioButton) -> Void)? = nil) {
         // Initialize
         self.alignment = alignment
         self.title = title
@@ -79,6 +79,7 @@ public struct SwiftletRadioButtonPicker: View {
         self.textColor = textColor
         self.columns = columns
         self.selection = selection
+        self.buttonGroup = buttonGroup
         self.selectionChanged = selectionChanged
     }
     
@@ -178,6 +179,17 @@ public struct SwiftletRadioButtonPicker: View {
         buttonGroup.add(button)
         
         // Return self
+        return self
+    }
+    
+    /// Adds a new radio button group to this control.
+    /// - Parameter buttonGroup: The radio button group to add.
+    /// - Returns: This `SwiftletRadioButtonPicker` so multiple command can be chained.
+    @discardableResult public mutating func radioButtonGroup(buttonGroup:SwiftletRadioButtonGroup) -> SwiftletRadioButtonPicker {
+        
+        // Add new radio button group.
+        self.buttonGroup = buttonGroup
+        
         return self
     }
     
